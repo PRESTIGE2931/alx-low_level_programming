@@ -1,7 +1,8 @@
 #include <stdio.h>
 /**
- * main-A program that prints a line with printf;
- * retun (0);
+ * main - A program that prints a line with printf;
+ * description: this print a line , no puts allowed;
+ * Return: 0 (Success);
  */
 int main(void)
 {
