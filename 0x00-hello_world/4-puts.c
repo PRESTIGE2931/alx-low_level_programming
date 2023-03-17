@@ -6,6 +6,9 @@
  */
 int main(void)
 {
-puts("\"Progiramming is like building a multilingual puzzle");
+char s[50];
+strcpy(s, "\"Programming is like building a multilingual puzzle")
+puts(s);
 return (0);
 }
+
