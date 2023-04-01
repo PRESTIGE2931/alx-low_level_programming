@@ -1,23 +1,20 @@
 #include "main.h"
+
 /**
- * _strpbrk - Entry point
- * @s: input
- * @accept: input
- * Return: Always 0 (Success)
+ * reverse_array - reverses an array of integers
+ * @a: array to be reversed
+ * @n: number of elements in the array
  */
-char *_strpbrk(char *s, char *accept)
+void reverse_array(int *a, int n)
 {
-		int k;
+	int i, j, tmp;
 
-		while (*s)
-		{
-			for (k = 0; accept[k]; k++)
-			{
-			if (*s == accept[k])
-			return (s);
-			}
-		s++;
-		}
+	j = n - 1;
 
-	return ('\0');
+	for (i = 0; i < n / 2; i++)
+	{
+		tmp = a[i];
+		a[i] = a[j];
+		a[j--] = tmp;
+	}
 }

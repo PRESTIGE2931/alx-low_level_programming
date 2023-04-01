@@ -1,27 +1,29 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * print_diagsums - Entry point
- * @a: input
- * @size: input
- * Return: Always 0 (Success)
+ * rot13 - encodes a string in rot13
+ * @s: string to be encoded
+ *
+ * Return: the resulting string
  */
-void print_diagsums(int *a, int size)
+char *rot13(char *s)
 {
-	int sum1, sum2, y;
+	int i, j;
 
-	sum1 = 0;
-	sum2 = 0;
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (y = 0; y < size; y++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		sum1 = sum1 + a[y * size + y];
+		for (j = 0; a[j] != '\0'; j++)
+		{
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+				break;
+			}
+		}
 	}
 
-	for (y = size - 1; y >= 0; y--)
-	{
-		sum2 += a[y * size + (size - y - 1)];
-	}
-
-	printf("%d, %d\n", sum1, sum2);
+	return (s);
 }
