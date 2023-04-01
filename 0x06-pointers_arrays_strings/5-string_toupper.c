@@ -1,26 +1,21 @@
 #include "main.h"
+
 /**
- * _strstr - Entry point
- * @haystack: input
- * @needle: input
- * Return: Always 0 (Success)
+ * string_toupper - changes all lowercase letters of a string
+ * to uppercase
+ * @s: string to modify
+ *
+ * Return: the resulting string
  */
-char *_strstr(char *haystack, char *needle)
+char *string_toupper(char *s)
 {
-	for (; *haystack != '\0'; haystack++)
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		char *l = haystack;
-		char *p = needle;
-
-		while (*l == *p && *p != '\0')
-		{
-			l++;
-			p++;
-		}
-
-		if (*p == '\0')
-			return (haystack);
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = s[i] - 32;
 	}
 
-	return (0);
+	return (s);
 }
