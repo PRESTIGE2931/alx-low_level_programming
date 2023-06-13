@@ -22,8 +22,7 @@ while (isalpha(str[i]) != 0 && str[length] != '\0')
 {
 length++;
 }
-new = length - 1;
-pointer_to_duplicate = malloc(sizeof(char) * (new));
+pointer_to_duplicate = malloc(sizeof(char) * (length));
 if (pointer_to_duplicate == NULL)
 return (NULL);
 else
@@ -31,6 +30,6 @@ do
 {
 pointer_to_duplicate[i] = str[i];
 i++;
-} while (str[i] != '\0' && i <= new);
+} while (i < length);
 return (pointer_to_duplicate);
 }
