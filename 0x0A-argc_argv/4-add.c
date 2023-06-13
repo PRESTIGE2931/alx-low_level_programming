@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * main -prints different values depending on the argv in the main function 
+ * main -prints different values depending on the argv in the main function
  * @argc: number of arguments
  * @argv: array of arguments
  *
@@ -15,6 +15,7 @@ int main(int argc, char const *argv[])
 {
     int i = 1;
     int save = 0;
+    char sub;
 
     if (argc <= 1)
     {
@@ -24,13 +25,18 @@ int main(int argc, char const *argv[])
 
     for (i = 1; i < argc; i++)
     {
-        if (isdigit(*argv[i]) == 0)
-        {
-            printf("Error\n");
-            return 1;
-        }
-        else
-            save += atoi(argv[i]);
+
+            sub = *argv[i];
+            printf("%d", sub);
+
+            if (isdigit(*argv[i]) == 0)
+            {
+                printf("Error\n");
+                return 1;
+            }
+            else
+                save += atoi(argv[i]);
+
     }
     printf("%d\n", save);
 
