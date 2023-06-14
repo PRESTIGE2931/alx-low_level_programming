@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
- * count_word - helper function to count the number of alpha_cluster in a string
+ * count_word - helper function to count the number of 
+ * alpha_cluster in a string
  * @s: string to evaluate
  *
  * Return: number of alpha_cluster
@@ -72,6 +73,5 @@ char **strtow(char *str)
 	}
 
 	pointer_to_array[k] = NULL;
-
 	return (pointer_to_array);
 }

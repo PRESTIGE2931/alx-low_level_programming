@@ -6,7 +6,7 @@
 /**
 * *_strdup(char *str) - returns a pointer to a newly allocated space in memory
 * @str: string to duplicate
-*
+* @pointer_to_duplicate: pointer to duplicate 
 * Returns (pointer_to_duplicate) on success
 */
 char *_strdup(char *str)
@@ -21,12 +21,11 @@ while (isalpha(str[i]) != 0 && str[length] != '\0')
 {
 length++;
 }
-pointer_to_duplicate = malloc(sizeof(char) * length +1);
+pointer_to_duplicate = malloc(sizeof(char) * length + 1);
 if (pointer_to_duplicate == NULL)
 return (NULL);
 else
-do
-{
+do{
 pointer_to_duplicate[i] = str[i];
 i++;
 } while (i < length);
