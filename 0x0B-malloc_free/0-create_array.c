@@ -4,7 +4,6 @@
 
 /**
 * create_array - creates an array of chars
-* @pointer_to_array: the address of memory created
 * @c: special charater to initialize the pointer value
 * @size: the size of the memory to print
 *
