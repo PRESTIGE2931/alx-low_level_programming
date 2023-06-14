@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * free_grid - frees the memory allocate for the grid 
+ * free_grid - frees the memory allocate for the grid
  * from the previous function
  * created by alloc_grid()
  * @grid: grid to free
