@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * count_word - helper function to count the number of 
+ * count_word - helper function to count the number of
  * alpha_cluster in a string
  * @s: string to evaluate
  *
