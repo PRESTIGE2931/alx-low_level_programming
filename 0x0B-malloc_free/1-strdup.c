@@ -4,7 +4,7 @@
 #include "main.h"
 
 /**
-* *_strdup(char *str) - returns a pointer to a newly allocated space in memory
+* _strdup(char *str) - returns a pointer to a newly allocated space in memory
 * @str: string to duplicate
 * @pointer_to_duplicate: pointer to duplicate 
 * Returns (pointer_to_duplicate) on success
