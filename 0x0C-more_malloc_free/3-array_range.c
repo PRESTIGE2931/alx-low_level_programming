@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
@@ -8,23 +7,18 @@
  * @max: maximum range of values stored and number of elements
  *
  * Return: pointer to the new array
-*/
+ */
 int *array_range(int min, int max)
 {
-    int *pointer_to_array;
-    unsigned int length = 0, i;
-
-    if (min > max)
-        return (NULL);
-    else
-        length = max - min;    
-    pointer_to_array = malloc(sizeof(int) * length + 1);
-    if (pointer_to_array == NULL)
-        return (NULL);
-   for (i = 0; min <= max; i++)
-   {
-        pointer_to_array[i] = min;
-        min++;
-   }
-    return (pointer_to_array);
+int *pointer_to;
+int i, length;
+if (min > max)
+return (NULL);
+length = max - min + 1;
+pointer_to = malloc(sizeof(int) * length);
+if (pointer_to == NULL)
+return (NULL);
+for (i = 0; min <= max; i++)
+pointer_to[i] = min++;
+return (pointer_to);
 }
