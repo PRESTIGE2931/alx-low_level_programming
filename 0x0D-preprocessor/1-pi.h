@@ -1,5 +1,4 @@
-#if !defined HEADER_PI
-
+#if !defined HEADER_FILE
+#define HEADER_FILE
 #define PI (3.14159265359)
-
 #endif
