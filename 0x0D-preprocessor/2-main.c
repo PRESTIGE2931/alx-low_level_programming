@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main -  prints out the current file location 
+ * main- prints out the current file location 
  *
  * Return: Always 0 (Success)
  */
