@@ -3,6 +3,11 @@
 #include "variadic_functions.h"
 #define NULL ((void *)0)
 
+/**
+ * print_strings - prints strings
+ * @separator: separator between strings
+ * @n: number of arguments
+*/
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 unsigned int i = 0;
@@ -18,6 +23,6 @@ printf("%s%s", new, separator);
 else
 printf("%s", new);
 }
-va_end (agrs);
+va_end(agrs);
 printf("\n");
 }
