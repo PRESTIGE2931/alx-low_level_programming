@@ -7,7 +7,7 @@
  * @head:last node list
  * @str:string
  * Return: (newList) node created
- */
+*/
 list_t *add_node(list_t **head, const char *str)
 {
 char *duplicate;
