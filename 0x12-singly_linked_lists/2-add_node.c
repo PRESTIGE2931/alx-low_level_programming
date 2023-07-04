@@ -13,9 +13,10 @@ list_t *add_node(list_t **head, const char *str)
 char *duplicate;
 list_t *newList = (list_t *)malloc(sizeof(list_t));
 
-if (newList == NULL){
+if (newList == NULL)
+{
 free(newList);
-return NULL;
+return (NULL);
 }
 duplicate = strdup(str);
 newList->len = strlen(duplicate);
