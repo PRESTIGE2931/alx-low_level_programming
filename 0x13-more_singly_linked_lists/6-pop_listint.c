@@ -3,7 +3,8 @@
 /**
  * pop_listint - free's the head node
  * @head: pointer to the head node
- * Return (value) value of n of the head node
+ *
+ * Return: (value) value of n of the head node
 */
 int pop_listint(listint_t **head)
 {
