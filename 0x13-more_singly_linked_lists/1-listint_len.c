@@ -2,15 +2,15 @@
 #include <stdio.h>
 
 /**
- * print_listint -returns number elements of a listint_t list type.
- * @h: A pointer to the head of the list_t list.
+ * listint_len - Returns the number of elements
+ * in a linked listint_t list.
+ * @h: A pointer to the head of the listint_t list.
  *
- * Return: (count) number of nodes in the list_t list.
+ * Return: (count) number of elements in the listint_t list.
  */
-size_t print_listint(const listint_t *h)
+size_t listint_len(const listint_t *h)
 {
 size_t count = 0;
-
 while (h)
 {
 count++;

@@ -3,6 +3,7 @@
 
 /**
  * free_listint - free's the specified node form the memory
+ * @head: pointer to the first node
  *
  * Return: void
  */
