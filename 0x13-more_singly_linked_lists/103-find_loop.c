@@ -5,7 +5,7 @@
  * a listint_t linked list.
  * @head: A pointer to the head of the listint_t list.
  *
- * Return: If there is no loop - NULL.
+ * Return: (NULL) there is no loop
  */
 listint_t *find_listint_loop(listint_t *head)
 {
