@@ -1,3 +1,5 @@
+#define NULL  ((void*)0)
+
 /**
  * binary_to_uint - converts a binary number to an unsigned int
  * @b: pointing to a string of 0 and 1 chars
@@ -10,7 +12,7 @@ int i;
 unsigned int d = 0;
 
 if (!b)
-return (0);
+return (NULL);
 for (i = 0 ; b[i] != '\0' ; i++)
 {
 if (b[i] != '1' && b[i] != '0')
