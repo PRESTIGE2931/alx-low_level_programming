@@ -4,6 +4,8 @@
 
 /**
  * create_file - creates a file and write to it
+ * @filename: pointer to the filename char string
+ * @text_content: what to copy in your new file
  *
  * Return: (1) Success
  */
