@@ -9,21 +9,19 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-signed int openFile, writeFile, count = 0;
+int O, W, l = 0;
 
 if (filename == NULL)
 return (-1);
 if (text_content != NULL)
 {
-while (text_content != '\0')
-{
-count++;
+for (l = 0; text_content[l];)
+l++;
 }
-}
-openFile = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
-writeFile = write(openFile, text_content, count);
-if (openFile == -1 | writeFile == -1)
+O = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+W = write(O, text_content, l);
+if (O == -1 || W == -1)
 return (-1);
-close(openFile);
+close(O);
 return (1);
 }
