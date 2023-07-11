@@ -4,9 +4,8 @@
 
 /**
  * read_textfile - opens, a file, reads it, and writes it
- * @filename: a pointer to the file name string
+ * @filename: a pointer to the file name stringi
  * @letters: number to chars to be read
- *
  * Return: the amount of chars actually read
 */
 ssize_t read_textfile(const char *filename, size_t letters)
