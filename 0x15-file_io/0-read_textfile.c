@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "main.h"
 
+/**
+ * read_textfile - opens, a file, reads it, and writes it
+ * @filename: a pointer to the file name string
+ * @letters: number to chars to be read
+ * 
+ * Return: the amount of chars actually read
+*/
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 char *buffer;
@@ -19,7 +26,11 @@ return (0);
 count = sizeof((char) *buffer);
 readFile = read(openFile, buffer, letters);
 writeFile = write(STDOUT_FILENO, buffer, readFile);
-if(writeFile < count)
+if(writeFile < count){
+free(buffer);
 return (0);
+}
+free(buffer);
+close(openFile);
 return (writeFile);
 }
